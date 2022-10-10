@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function ExpCard() {
   return (
-    <article>
+    <article className="flex w-[500px] flex-shrink-0 cursor-pointer snap-center flex-col items-center space-y-7 overflow-hidden rounded-lg bg-[#292929] p-10 opacity-40 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900px]">
       <motion.img
         initial={{
           y: -100,
@@ -22,19 +22,31 @@ function ExpCard() {
       />
       <div className="px-0 md:px-10">
         <h4 className="text-4xl font-light">Customer Insights Analyst</h4>
-        <p className="font-bold text-2xl mt-1">nib Health Group</p>
-        <div className="flex space-x-2 my-2">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="" className="h-10 w-10 rounded-full"/>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="" className="h-10 w-10 rounded-full"/>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="" className="h-10 w-10 rounded-full"/>
+        <p className="mt-1 text-2xl font-bold">nib Health Group</p>
+        <div className="my-2 flex space-x-2">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"
+            alt=""
+            className="h-10 w-10 rounded-full"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"
+            alt=""
+            className="h-10 w-10 rounded-full"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"
+            alt=""
+            className="h-10 w-10 rounded-full"
+          />
         </div>
-        <p className="uppercase py-5 text-gray-300">Start....End date</p>
-        <ul className="list-disc space-y-4 ml-5 text-lg">
-            <li>summary points</li>
-            <li>summary points</li>
-            <li>summary points</li>
-            <li>summary points</li>
-            <li>summary points</li>
+        <p className="py-5 uppercase text-gray-300">Start....End date</p>
+        <ul className="ml-5 list-disc space-y-4 text-lg">
+          <li>summary points</li>
+          <li>summary points</li>
+          <li>summary points</li>
+          <li>summary points</li>
+          <li>summary points</li>
         </ul>
       </div>
     </article>
