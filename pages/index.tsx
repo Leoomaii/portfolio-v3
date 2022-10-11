@@ -9,12 +9,12 @@ import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import WorkExperience from "../components/WorkExperience";
 import { Experience, PageInfo, Project, Skill, Social } from "../typings";
-import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchExperiences } from "../utils/fetchExperiences";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchSocials } from "../utils/fetchSocials";
 import Image from "next/image";
+import { fetchPageInfo } from "../utils/fetchPageInfo";
 
 type Props = {
   pageInfo: PageInfo;
