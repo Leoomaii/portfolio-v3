@@ -1,9 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-type Props = {};
+import { Project } from "../typings";
+import { urlFor } from "../sanity";
+type Props = {
+projects: Project[]
 
-function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
+};
+
+function Projects({projects}: Props) {
   return (
     <motion.div
       initial={{
@@ -16,9 +20,12 @@ function Projects({}: Props) {
       <h3 className="absolute top-24 text-2xl uppercase tracking-[20px] text-gray-500">
         Projects
       </h3>
-      <div className="relative z-20 flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#009DCF]/80">
+
+      <div className="relative z-20 flex w-full snap-x snap-mandatory overflow-y-hidden overflow-x-scroll 
+      scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#009DCF]/80">
         {projects.map((project, i) => (
-          <div className="flex h-screen w-screen flex-shrink-0 snap-center flex-col items-center justify-center space-y-5 p-20 md:p-44">
+          <div key={project._id} 
+          className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen lg:p-80">
             <motion.img
               initial={{
                 y: -300,
@@ -27,24 +34,28 @@ function Projects({}: Props) {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              src="https://play-lh.googleusercontent.com/9Sk8BRBUGXjqX5gSI1LX8AZF1W8KjqdWSTjmBxxEmvR4Ec2PN2wd4HcufuJ3Sd5LDg=w240-h480-rw"
+              src={urlFor(project?.image).url()}
               alt=""
+              className="rounded-xl lg:h-[550px] lg:w-[1500px]"
             />
             <div className="max-w-6 space-y-10 px-0 md:px-10">
               <h4 className="text-center text-4xl font-semibold">
                 <span className="underline decoration-[#009DCF]/50">
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
-                Netflix Clone
+                {project?.title}
               </h4>
+              <div className="flex items-center space-x-2 justify-center">
+              {project?.technologies.map(technology => (
+                <img 
+                className="h-10 w-10"
+                key={technology._id}
+                src={urlFor(technology?.image).url()}
+                />
+              ))}
+              </div>
               <p className="text-center text-lg md:text-left">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel
-                iste, recusandae tenetur harum quis ea voluptatem rem officiis
-                reiciendis? Sequi quidem impedit quaerat officiis ratione. Totam
-                explicabo adipisci neque suscipit repellendus nostrum assumenda
-                ipsum, aliquid, vitae, eveniet sequi! Inventore neque esse
-                commodi, excepturi numquam enim alias odit delectus! Fugit,
-                molestiae!
+              {project?.summary}
               </p>
             </div>
           </div>

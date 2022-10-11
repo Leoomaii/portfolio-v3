@@ -19,7 +19,7 @@ type Props = {};
 function Contact({}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:leonardo-mai@outlook?subject=${formData.subject}&body=${formData.message}`
+    window.location.href = `mailto:leonardo-mai@outlook.com?subject=${formData.subject}&body=${formData.message}`
   };
 
 
