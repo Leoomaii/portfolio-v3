@@ -4,11 +4,10 @@ import { PageInfo } from "../typings";
 import { urlFor } from "../sanity";
 
 type Props = {
-
-  pageInfo: PageInfo
+  pageInfo: PageInfo;
 };
 
-function About({pageInfo}: Props) {
+function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{
@@ -40,13 +39,10 @@ function About({pageInfo}: Props) {
       />
       <div className="space-y-10 px-10 md:px-10">
         <h4 className="text-4xl font-semibold">
-          Here's a{" "}
-          <span className="underline decoration-[#009DCF]">little</span>{" "}
+          Here's a<span className="underline decoration-[#009DCF]">little</span>
           background
         </h4>
-        <p className="text-base">
-          {pageInfo?.backgroundInformation}
-        </p>
+        <p className="text-base">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );
