@@ -6,7 +6,7 @@ export default {
   type: "document",
   fields: [
     {
-      name: "title",
+      name: "Title",
       title: "Title",
       description: "Title of skill",
       type: "string",

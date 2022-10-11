@@ -36,6 +36,7 @@ export default function ExpCard({ experience }: Props) {
               key={technology._id}
               className="h-10 w-10 rounded-full"
               src={urlFor(technology.image).url()}
+              alt=""
             />
           ))}
         </div>

@@ -28,6 +28,7 @@ function Hero({pageInfo}: Props) {
         height="128px"
         width="128px"
         className="relative mx-auto rounded-full object-cover"
+        alt=""
       />
       <div className="z-20">
         <h2 className="pb-2 text-sm uppercase tracking-[15px] text-gray-500">

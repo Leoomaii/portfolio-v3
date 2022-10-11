@@ -14,6 +14,7 @@ import { fetchExperiences } from "../utils/fetchExperiences";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchSocials } from "../utils/fetchSocials";
+import Image from "next/image";
 
 type Props = {
   pageInfo: PageInfo;
@@ -60,8 +61,10 @@ const Home = ({ pageInfo,
       <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
-            <img
-              className="h-20 w-20 cursor-pointer grayscale filter hover:grayscale-0"
+            <Image
+              height="80px"
+              width="80px"
+              className="cursor-pointer grayscale filter hover:grayscale-0"
               src="https://i.postimg.cc/nhtWwN07/Logo.png"
               alt=""
             />
