@@ -1,4 +1,3 @@
-import { Rule } from "postcss";
 
 export default {
   name: "skill",

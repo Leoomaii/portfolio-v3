@@ -1,5 +1,3 @@
-import { Rule } from "postcss";
-
 export default {
   name: "social",
   title: "Social",
