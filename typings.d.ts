@@ -5,13 +5,6 @@ interface SanityBody {
   _updatedAt: string;
 }
 
-interface Image {
-  _type: "image";
-  asset: {
-    _ref: string;
-    _type: "reference";
-  };
-}
 
 export interface PageInfo extends SanityBody {
   _type: "pageInfo";
@@ -24,6 +17,15 @@ export interface PageInfo extends SanityBody {
   phoneNumber: string;
   profilePic: Image;
 }
+
+interface Image {
+  _type: "image";
+  asset: {
+    _ref: string;
+    _type: "reference";
+  };
+}
+
 
 export interface Technology extends SanityBody {
   _type: "skill";
