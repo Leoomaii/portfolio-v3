@@ -53,6 +53,7 @@ export interface Project extends SanityBody {
   linkToBuild: string;
   summary: string;
   technologies: Technology[];
+  url: string;
 }
 
 export interface Skill extends SanityBody {

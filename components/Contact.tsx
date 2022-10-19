@@ -60,12 +60,14 @@ function Contact({}: Props) {
               placeholder="Name"
               className="contactInput"
               type="text"
+              name="user_name"
             />
             <input
               {...register("email")}
               placeholder="Email"
               className="contactInput"
               type="email"
+              name="user_email"
             />
           </div>
           <input
@@ -73,11 +75,13 @@ function Contact({}: Props) {
             placeholder="Subject"
             className="contactInput"
             type="text"
+            name="user_subject"
           />
           <textarea
             {...register("message")}
             placeholder="Message"
             className="contactInput"
+            name="message"
           />
           <button
             type="submit"
