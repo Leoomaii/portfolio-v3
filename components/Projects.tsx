@@ -26,7 +26,7 @@ function Projects({projects}: Props) {
         {projects.map((project, i) => (
           <div key={project._id} 
           className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen lg:p-80">
-            <a href={project.linkToBuild} target="_blank" className="pb-8 text-center text-4xl font-semibold md:text-6xl cursor-pointer underline decoration-[#009DCF]/50">{project.title}</a>
+            <a href={project.linkToBuild} rel="noreferrer" target="_blank" className="pb-8 text-center text-4xl font-semibold md:text-6xl cursor-pointer underline decoration-[#009DCF]/50">{project.title}</a>
             <motion.img
               initial={{
                 y: -300,
